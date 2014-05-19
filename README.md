@@ -1,15 +1,9 @@
-## French LinuxMag on Scientific Python
+### French LinuxMag on Scientific Python
 
+#### Matplotlib - Nicolas P. Rougier
 
-
-### Matplotlib - Nicolas P. Rougier
-
-![cosinus.png](https://raw.githubusercontent.com/rougier/LinuxMag-HS-2014/master/matplotlib/cosinus.png)
-
-![firefox.png](https://raw.githubusercontent.com/rougier/LinuxMag-HS-2014/master/matplotlib/firefox.png)
-
-![lena-pixalated.png](https://raw.githubusercontent.com/rougier/LinuxMag-HS-2014/master/matplotlib/lena-pixelated.png)
-
-![rain.png](https://raw.githubusercontent.com/rougier/LinuxMag-HS-2014/master/matplotlib/rain.png)
-
-![earthquakes.png](https://raw.githubusercontent.com/rougier/LinuxMag-HS-2014/master/matplotlib/earthquakes.png)
+ * [cosinus.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/cosinus.py)
+ * [lena.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/lena.py)
+ * [firefox.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/firefox.py)
+ * [rain.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/rain.py)
+ * [earthquake.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/earthqueks.py)
