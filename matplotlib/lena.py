@@ -9,53 +9,53 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib._png import read_png
 
-# On enlève la barre d'outils
+# No toolbar
 matplotlib.rcParams['toolbar'] = 'None'
 
-# L'image  est stockée dans uns tableau de numpy  de taille (512,512,3)
+# Read the image into a de numpy array (shape = (512,512,3))
 RGB = read_png('lena.png')
 
-# On récupère la taille de l'image (attention à l'ordre)
+# Get image size (be careful with order)
 height, width = RGB.shape[:2]
 
-# On fixe in DPI
+# Set DPI
 dpi = 72.0
 
-# On calcule la taille de la figure correspondant à l'image
+# Set  figure size / image
 figsize= width/float(dpi), height/float(dpi)
 
-# On crée la figure
+# Figure creation
 fig = plt.figure(figsize=figsize, dpi=dpi, facecolor="white")
 
-# On demande un cadre dont la taille est l'e,semble de la figure
+# Set axes on the whole figure
 ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False)
 
-# On affiche l'image (zorder=0)
+# Display image
 ax.imshow(RGB, interpolation='nearest')
 
-# On pixelize l'image
+# Pixelate image
 n = 16
 RGB = RGB[::n,::n,:]
 RGB = np.repeat(RGB,n, axis=0)
 RGB = np.repeat(RGB,n, axis=1)
 
-# On créé un disque qui va servir pour "clipper" l'image
+# Mask creation
 patch = patches.Circle((.55,.45), radius=.25, transform=ax.transAxes,
                         facecolor='None', edgecolor='None',zorder=1)
 
-# On affiche l'image pixelizée et clippée
+# Display clipped pixelated image
 ax.imshow(RGB, cmap=plt.cm.gray, zorder=3, interpolation='nearest', clip_path=patch)
 
-# On affiche un cercle autour de l'image clippée
+# Add a circle around
 patch = patches.Circle((.55,.45), radius=.25, transform=ax.transAxes,
                        lw=1, facecolor='none', edgecolor='black', zorder=2)
 ax.add_patch(patch)
 
-# On enlève les repères sur les axes
+# remove ticks
 ax.set_xticks([]), ax.set_yticks([])
 
-# On sauve l'image
+# Save image
 plt.savefig("lena-pixelated.png", dpi=dpi)
 
-# On affiche l'image
+# Displya figure
 plt.show()

@@ -6,33 +6,34 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Création d'une figure de taille 8x6 (points) en utilisant un DPI de 80
+# Creation of a figure of size 8x6 (points) using DPI of 80
 fig = plt.figure(figsize=(8,6), dpi=80)
 
-# Création d'une sous-figure
+# Creation of a sub-figure
 ax = plt.subplot(1,1,1)
 
-# Création de X et Y
+# Creation of X and Y
 X = np.linspace(0, 2*np.pi, 256)
 Y = np.cos(X)
 
-# Affichage de la courbe en bleu, épaisseur 1, trait continu
+# Display of blue curve, linewidht 1
 ax.plot(X, Y, color="blue", linewidth=1.0, linestyle="-")
 
-# Limites en abscisse
+# x limits
 ax.set_xlim(0,2*np.pi)
 
-# Indicateurs sur les abscisses
+# x ticks
 ax.set_xticks(np.linspace(0,6,6, endpoint=True))
 
-# Limites en abscisse
+# y limits
+Limites en abscisse
 ax.set_ylim(-1.0,1.0)
 
-# Indicateurs sur les ordnonnées
+# y ticks
 ax.set_yticks(np.linspace(-1,1,5,endpoint=True))
 
-# On sauve a figure
+# Figure saving
 plt.savefig('cosinus.png', dpi=72)
 
-# Affiche la figure
+# Figure display
 plt.show()

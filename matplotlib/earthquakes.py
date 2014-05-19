@@ -49,11 +49,13 @@ P = np.zeros(50, dtype=[('position', float, 2),
                         ('growth',   float, 1),
                         ('color',    float, 4)])
 
+# Basemap projection
 map = Basemap(projection='mill')
 map.drawcoastlines(color='0.50', linewidth=0.25)
 map.fillcontinents(color='0.95')
 scat = ax.scatter(P['position'][:,0], P['position'][:,1], P['size'], lw=0.5,
                   edgecolors = P['color'], facecolors='None', zorder=10)
+
 
 def update(frame):
     current = frame % len(E)
