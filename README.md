@@ -6,4 +6,4 @@
  * [lena.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/lena.py)
  * [firefox.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/firefox.py)
  * [rain.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/rain.py)
- * [earthquake.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/earthqueks.py)
+ * [earthquakes.py](https://github.com/rougier/LinuxMag-HS-2014/blob/master/matplotlib/earthquakes.py)
